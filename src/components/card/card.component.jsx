@@ -5,7 +5,16 @@ import './card.style.css';
 const Card = ({ headline, time, views, thumbImg, trainerImg, workouts }) => {
   return (
     <div className='card'>
-      <img className='thumbnail-img' src={thumbImg} alt='video' />
+      <div className='thumbnail-div'>
+        <img className='thumbnail-img' src={thumbImg} alt='video' />
+        {workouts ? (
+          <div className='workout-overlay'>
+            <p>{workouts}</p>
+            <p className='workouts'>workouts</p>
+          </div>
+        ) : null}
+      </div>
+
       <div className='card-info'>
         <div className='card-headline'>
           <p>{headline}</p>
@@ -13,8 +22,14 @@ const Card = ({ headline, time, views, thumbImg, trainerImg, workouts }) => {
         </div>
         {time && views ? (
           <div className='trainer-data'>
-            <span>{time}</span>
-            <span>{views}</span>
+            <span>
+              <i class='glyphicon glyphicon-time'></i>
+              {time}
+            </span>
+            <span>
+              <i class='glyphicon glyphicon-eye-open'></i>
+              {views}
+            </span>
           </div>
         ) : null}
       </div>

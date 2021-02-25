@@ -1,18 +1,27 @@
 .card {
   width: 15vw;
   margin: 5px;
+  border: 1px solid grey;
+  border-radius: 3px;
 }
 
-.card .thumbnail-img {
+p {
+  margin-top: 10px;
+}
+
+.thumbnail-img {
   width: 100%;
+  border-radius: 3px;
 }
 
 .card-headline {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 5px;
 }
 .card-headline p {
+  font-weight: bold;
   font-size: 10px;
   margin-right: auto;
 }
@@ -25,5 +34,32 @@
 
 .trainer-data {
   font-size: 8px;
+  padding: 5px;
+}
+
+.trainer-data span {
   margin-right: 5px;
+}
+i {
+  margin-right: 2px;
+}
+
+.thumbnail-div {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+}
+
+.workout-overlay {
+  position: absolute;
+  color: white;
+  background-color: grey;
+  opacity: 0.8;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 0 5px;
 }
