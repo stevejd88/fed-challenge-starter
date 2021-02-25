@@ -63,3 +63,7 @@ i {
   font-size: 10px;
   padding: 0 5px;
 }
+
+.clicked {
+  box-shadow: 10px 5px 5px grey;
+}
