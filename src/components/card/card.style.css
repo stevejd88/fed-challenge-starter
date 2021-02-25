@@ -1,0 +1,29 @@
+.card {
+  width: 15vw;
+  margin: 5px;
+}
+
+.card .thumbnail-img {
+  width: 100%;
+}
+
+.card-headline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-headline p {
+  font-size: 10px;
+  margin-right: auto;
+}
+
+.card-headline img {
+  border-radius: 50px;
+  max-height: 20px;
+  max-width: 20px;
+}
+
+.trainer-data {
+  font-size: 8px;
+  margin-right: 5px;
+}
