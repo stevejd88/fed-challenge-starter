@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './card.style.css';
 
-const Card = ({ headline, time, views, thumbImg, trainerImg, workouts }) => {
-  const [isSelected, setIsSelected] = useState(false);
-
-  function handleClick() {
-    setIsSelected(true);
-  }
-
+const Card = ({
+  headline,
+  time,
+  views,
+  thumbImg,
+  trainerImg,
+  workouts,
+  id,
+  className,
+  onClick
+}) => {
   return (
-    <div
-      className={`card ${isSelected ? 'clicked' : ''}`}
-      onClick={handleClick}
-    >
+    <div className={`card ${className}`} onClick={() => onClick(id)}>
       <div className='thumbnail-div'>
         <img className='thumbnail-img' src={thumbImg} alt='video' />
         {workouts ? (
