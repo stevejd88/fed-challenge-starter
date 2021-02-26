@@ -1,24 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
-
-import { toggleCardClicked } from '../../redux/card/card.actions';
+import React, { useState } from 'react';
 
 import './card.style.css';
 
-const Card = ({
-  headline,
-  time,
-  views,
-  thumbImg,
-  trainerImg,
-  workouts,
-  toggleCardClicked,
-  clicked
-}) => {
+const Card = ({ headline, time, views, thumbImg, trainerImg, workouts }) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  function handleClick() {
+    setIsSelected(true);
+  }
+
   return (
     <div
-      className={`card ${clicked ? 'clicked' : ''}`}
-      onClick={toggleCardClicked}
+      className={`card ${isSelected ? 'clicked' : ''}`}
+      onClick={handleClick}
     >
       <div className='thumbnail-div'>
         <img className='thumbnail-img' src={thumbImg} alt='video' />
@@ -52,12 +46,4 @@ const Card = ({
   );
 };
 
-const mapStateToProps = (state) => ({
-  clicked: state.card
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  toggleCardClicked: () => dispatch(toggleCardClicked())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Card);
+export default Card;

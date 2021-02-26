@@ -1,8 +1,9 @@
 .card {
-  width: 15vw;
+  /* width: 15vw; */
   margin: 5px;
   border: 1px solid grey;
   border-radius: 3px;
+  flex: 1 0 20%;
 }
 
 p {
