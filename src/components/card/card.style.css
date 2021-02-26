@@ -5,6 +5,10 @@
   flex: 1 0 20%;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 p {
   margin-top: 10px;
 }
